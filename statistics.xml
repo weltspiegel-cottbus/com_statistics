@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+
+    <name>COM_STATISTICS</name>
+    <version>1.0.0</version>
+    <creationDate>20.08.2026</creationDate>
+    <author>Michael Buchholz</author>
+    <authorEmail>mail@lean-stack.rocks</authorEmail>
+    <copyright>Weltspiegel Cottbus</copyright>
+    <license>MIT; see LICENSE</license>
+    <description>COM_STATISTICS_XML_DESCRIPTION</description>
+
+    <namespace path="src">Weltspiegel\Component\Statistics</namespace>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/statistics.install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/statistics.uninstall.sql</file>
+        </sql>
+    </uninstall>
+
+    <administration>
+        <menu link="option=com_statistics&amp;view=dashboard" img="class:chart">COM_STATISTICS</menu>
+        <files folder="administrator/components/com_statistics">
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+        </files>
+        <languages folder="administrator/components/com_statistics/language">
+            <language tag="de-DE">de-DE/com_statistics.ini</language>
+            <language tag="de-DE">de-DE/com_statistics.sys.ini</language>
+            <language tag="en-GB">en-GB/com_statistics.ini</language>
+            <language tag="en-GB">en-GB/com_statistics.sys.ini</language>
+        </languages>
+    </administration>
+
+    <files folder="components/com_statistics">
+        <folder>services</folder>
+        <folder>src</folder>
+    </files>
+
+</extension>

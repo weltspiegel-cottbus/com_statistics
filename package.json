@@ -1,0 +1,23 @@
+{
+  "name": "com_statistics",
+  "version": "1.0.0",
+  "description": "Weltspiegel statistics component - anonymous CSS based visitor measurement",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weltspiegel-cottbus/com_statistics.git"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No assets to build for this component'",
+    "package": "node .build/package.mjs",
+    "release": "npm run build && npm run package",
+    "changelog": "changelogen --output CHANGELOG.md --noAuthors",
+    "release:patch": "changelogen --release --patch --push --noAuthors",
+    "release:minor": "changelogen --release --minor --push --noAuthors",
+    "release:major": "changelogen --release --major --push --noAuthors"
+  },
+  "devDependencies": {
+    "changelogen": "^0.6.2"
+  }
+}

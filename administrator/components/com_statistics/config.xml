@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="data" label="Daten">
+        <field
+                name="retention_days"
+                type="number"
+                default="365"
+                min="0"
+                step="1"
+                label="Aufbewahrung (Tage)"
+                description="Messwerte, die älter sind, werden beim Öffnen der Statistik automatisch gelöscht. 0 schaltet das automatische Löschen ab."
+        />
+    </fieldset>
+</config>
