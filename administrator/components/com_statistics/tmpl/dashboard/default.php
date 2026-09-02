@@ -210,7 +210,13 @@ $pendingKeys  = array_diff($this->enabledMetrics, $measuredKeys);
                 </li>
                 <li>
                     Ein „Messpunkt" entspricht einem Seitenaufruf, bei dem der Browser CSS ausgeführt
-                    hat. Suchmaschinen-Roboter tauchen dadurch in der Regel nicht auf.
+                    hat. Suchmaschinen-Roboter, die nur den Text einlesen, tauchen dadurch nicht auf.
+                </li>
+                <li>
+                    Sehr kleine Werte sind mit Vorsicht zu lesen: Programme, die stur alle im
+                    Stylesheet gefundenen Adressen abrufen, hinterlassen in <em>jedem</em> Wert eine
+                    kleine Grundzahl. Einstellige Werte bedeuten daher meist „praktisch niemand",
+                    nicht „ein paar Besucher".
                 </li>
                 <?php if ($this->firstDay !== null) : ?>
                     <li>
