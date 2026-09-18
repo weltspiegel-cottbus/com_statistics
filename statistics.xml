@@ -46,4 +46,8 @@
         <folder>src</folder>
     </files>
 
+    <updateservers>
+        <server type="extension" priority="1" name="Weltspiegel Statistics Component Updates">https://raw.githubusercontent.com/weltspiegel-cottbus/com_statistics/main/update-manifest.xml</server>
+    </updateservers>
+
 </extension>

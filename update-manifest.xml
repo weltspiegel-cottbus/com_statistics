@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<updates>
+    <update>
+        <name>Weltspiegel Statistics Component</name>
+        <description>Joomla-Komponente für die anonyme Besucher-Statistik</description>
+        <element>com_statistics</element>
+        <type>component</type>
+        <version>1.0.0</version>
+        <infourl title="GitHub Repository">https://github.com/weltspiegel-cottbus/com_statistics</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/weltspiegel-cottbus/com_statistics/releases/download/v1.0.0/com_statistics-1.0.0.zip</downloadurl>
+        </downloads>
+        <maintainer>Michael Buchholz</maintainer>
+        <maintainerurl>https://www.weltspiegel-cottbus.de</maintainerurl>
+        <targetplatform name="joomla" version="6\.[0-9]"/>
+        <client>administrator</client>
+        <php_minimum>8.1</php_minimum>
+    </update>
+</updates>
