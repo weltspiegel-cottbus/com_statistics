@@ -16,7 +16,8 @@ use Joomla\CMS\Toolbar\ToolbarHelper;
 use Weltspiegel\Component\Statistics\Administrator\Model\DashboardModel;
 
 /**
- * Dashboard view showing the collected visitor statistics.
+ * Dashboard view showing the collected visitor statistics: page views and
+ * the devices they were made with.
  *
  * @since 1.0.0
  */
@@ -30,6 +31,33 @@ class HtmlView extends BaseHtmlView
      * @since 1.0.0
      */
     protected array $panels = [];
+
+    /**
+     * Page view statistics: key figures and panels ('total' is 0 without data)
+     *
+     * @var array
+     *
+     * @since 1.1.0
+     */
+    protected array $pageViews = ['total' => 0, 'facts' => [], 'panels' => []];
+
+    /**
+     * Whether the plugin is set to count page views
+     *
+     * @var bool
+     *
+     * @since 1.1.0
+     */
+    protected bool $pageViewCountingEnabled = true;
+
+    /**
+     * The panel the panel partial is rendering
+     *
+     * @var array
+     *
+     * @since 1.1.0
+     */
+    protected array $panel = [];
 
     /**
      * Selected period in days (0 = everything)
@@ -98,6 +126,9 @@ class HtmlView extends BaseHtmlView
 
         $this->days             = $model->getDays();
         $this->panels           = $model->getPanels();
+        $this->pageViews        = $model->getPageViews();
+
+        $this->pageViewCountingEnabled = $model->isPageViewCountingEnabled();
         $this->firstDay         = $model->getFirstDay();
         $this->collectorEnabled = $model->isCollectorEnabled();
         $this->enabledMetrics   = $model->getEnabledMetrics();
