@@ -1,6 +1,6 @@
 {
   "name": "com_statistics",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Weltspiegel statistics component - anonymous CSS based visitor measurement",
   "license": "MIT",
   "repository": {
